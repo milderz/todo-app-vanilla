@@ -1,16 +1,43 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  color-scheme: light dark;
+/* Reset margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+/* Body set up */
+
+html {
+  font-size: 62.5%;
+}
+:root {
+  /* color-scheme: light dark; */
+
   /* Primary */
   --brightBlue: hsl(220, 98%, 61%);
   --checkBackground: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
   /* Light Theme */
   --veryLightGray: hsl(0, 0%, 98%);
   --veryLightGrayishBlue: hsl(236, 33%, 92%);
   --lightGrayishBlue: hsl(233, 11%, 84%);
   --darkGrayishBlue: hsl(236, 9%, 61%);
   --veryDarkGrayishBlue: hsl(235, 19%, 35%);
+
   /* Dark Theme */
   --veryDarkBlue: hsl(235, 21%, 11%);
   --veryDarkDesaturatedBlue: hsl(235, 24%, 19%);
@@ -19,4 +46,33 @@
   --darkGrayishBlueDT: hsl(234, 11%, 52%);
   --veryDarkGrayishBlueDT1: hsl(233, 14%, 35%);
   --veryDarkGrayishBlueDT2: hsl(237, 14%, 26%);
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  width: 100%;
+  background: url("/images/bg-desktop-light.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+}
+.background {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  & .background-image {
+  }
+
+  & .background-solid {
+    width: 100%;
+    background-color: red;
+  }
 }
