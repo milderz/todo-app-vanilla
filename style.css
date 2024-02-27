@@ -63,16 +63,29 @@ main {
   background-size: cover;
   height: 300px;
 }
-.background {
+.container {
+  width: 540px;
+  margin: auto;
+  padding-top: 7.9rem;
+}
+
+.app-header {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-
-  & .background-image {
+  justify-content: space-between;
+  align-items: start;
+  & .app-header-title {
+    font-size: 4.1rem;
+    color: var(--veryLightGray);
+    margin-bottom: 5rem;
+    letter-spacing: 1.8rem;
   }
+}
 
-  & .background-solid {
-    width: 100%;
-    background-color: red;
-  }
+#add-todo-input {
+  width: 54rem;
+  height: 6.4rem;
+  border-radius: 0.4rem;
+  border: 0.2rem solid transparent;
+  margin-bottom: 2.4rem;
+  padding-left: 2.4rem;
 }
