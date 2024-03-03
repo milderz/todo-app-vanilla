@@ -28,12 +28,24 @@
             </svg>
           </button>
         </header>
-        <input
-          type="text"
-          name="add-todo-input"
-          id="add-todo-input"
-          placeholder="Add new task"
-        />
+        <form id="add-todo-form" action="submit">
+          <!-- <input type="checkbox" name="add-todo-check" id="add-todo-check" /> -->
+          <div class="custom-checkbox-container">
+            <div class="round">
+              <input type="checkbox" checked id="checkbox" />
+              <label for="checkbox"></label>
+            </div>
+          </div>
+          <label class="add-todo-input-label">
+            <input
+              type="text"
+              name="add-todo-input"
+              id="add-todo-input"
+              placeholder="Add new task"
+            />
+          </label>
+        </form>
+
         <div class="app-todo-list">
           <div class="app-todo-item">
             <input type="checkbox" name="check-todo" id="check-todo" />

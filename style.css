@@ -81,11 +81,86 @@ main {
   }
 }
 
-#add-todo-input {
+#add-todo-form {
   width: 54rem;
   height: 6.4rem;
   border-radius: 0.4rem;
   border: 0.2rem solid transparent;
-  margin-bottom: 2.4rem;
+  background-color: var(--veryLightGray);
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 0 0 2.4rem;
+}
+
+#add-todo-form:focus-within {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%))
+      border-box;
+  border-radius: 0.4rem;
+  border: 0.2rem solid transparent;
+}
+
+.add-todo-input-label {
+  height: 100%;
+  flex: 1;
+}
+#add-todo-input {
+  border: 0.2rem solid transparent;
+  height: 100%;
   padding-left: 2.4rem;
+  font-size: 1.6rem;
+  width: 100%;
+}
+#add-todo-input:focus-visible {
+  outline: none;
+}
+.custom-checkbox-container {
+}
+
+.round {
+  position: relative;
+}
+
+.round label {
+  background-color: #fff;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.round label:after {
+  border: 2px solid #fff;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 5px;
+  left: 5px;
+  opacity: 0;
+  position: absolute;
+  top: 6px;
+  width: 12px;
+  transform: rotate(-45deg);
+}
+
+.round input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.round input[type="checkbox"]:checked + label {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  border-color: var(--brightBlue);
+}
+.round input[type="checkbox"]:hover + label {
+  border-color: var(--brightBlue);
+}
+
+.round input[type="checkbox"]:checked + label:after {
+  opacity: 1;
 }
